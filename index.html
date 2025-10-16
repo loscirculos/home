@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atrium — Los Círculos (CA.ºSM+)</title>
+<meta name="description" content="Centro Virtual de Ciencia Interior — Hermetismo, Alquimia Interior y Ontología del Ser. Atrium de Los Círculos.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600..900&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg1:#534590; --bg2:#000000; --ink:#EAEAEA; --muted:#BFB9DF; --line:#2b2b2b; --gold:#C9A947;
+  --max:1120px; --radius:16px; --gap:20px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{
+  margin:0; color:var(--ink); background:
+  linear-gradient(120deg, var(--bg1) 0%, #2b2450 30%, var(--bg2) 70%);
+  font:400 16px/1.75 "Raleway",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+}
+a{color:var(--muted);text-decoration:none}
+a:hover{color:#fff}
+.container{max-width:var(--max); margin:auto; padding:0 10px}
+.section{padding:36px 0}
+.card{
+  background:rgba(0,0,0,.55); border:1px solid rgba(255,255,255,.08);
+  border-radius:var(--radius); backdrop-filter:blur(2px);
+  box-shadow:0 10px 28px rgba(0,0,0,.28);
+}
+h1,h2,h3{margin:.2em 0 .4em; font-family:"Cinzel",serif; letter-spacing:.5px}
+h1{font-weight:800; font-size:clamp(28px,5vw,44px)}
+h2{font-weight:700; font-size:clamp(22px,3.2vw,34px); color:var(--muted)}
+h3{font-weight:700; font-size:clamp(18px,2.4vw,22px)}
+p{margin:.6em 0}
+.btn{
+  display:inline-block; padding:12px 18px; border-radius:999px;
+  background:var(--muted); color:#111; font-weight:700
+}
+.btn--ghost{background:transparent; border:1px solid var(--muted); color:var(--muted)}
+.btn:hover{filter:brightness(1.1)}
+/* NAV */
+nav{
+  position:sticky; top:0; z-index:50; backdrop-filter:blur(6px);
+  background:rgba(0,0,0,.45); border-bottom:1px solid rgba(255,255,255,.08)
+}
+.navwrap{display:flex; align-items:center; gap:16px; padding:10px 0}
+.brand{display:flex; align-items:center; gap:10px}
+.brand img{width:34px; height:34px}
+.brand span{font-family:"Cinzel",serif; font-weight:800; letter-spacing:.6px}
+.menu{margin-left:auto; display:flex; gap:14px; flex-wrap:wrap}
+.menu a{padding:8px 10px; border-radius:8px}
+.menu a:hover{background:rgba(255,255,255,.06)}
+/* HERO */
+.hero{padding:86px 0 54px}
+.hero-grid{
+  display:grid; gap:28px; align-items:center;
+  grid-template-columns: 1.2fr 1fr;
+}
+.hero-llave {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  background: none;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 38px rgba(0,0,0,0.25);
+  min-height: 340px;
+  margin-bottom: 16px;
+  padding: 0;
+}
+.hero-text {
+  flex: 1 1 420px;
+  background: #1a162d;
+  color: #EAEAEA;
+  padding: 48px 38px 42px 42px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 330px;
+}
+.hero-text h2 {
+  font-family: "Cinzel", serif;
+  font-size: 2.2em;
+  font-weight: 800;
+  margin: 0 0 0.15em 0;
+  color: #e4e0fb;
+  letter-spacing: .6px;
+}
+.hero-subtitle {
+  font-family: "Cinzel", serif;
+  font-size: 1.16em;
+  font-weight: 600;
+  color: #bfb9df;
+  letter-spacing: 1px;
+  margin: 0 0 18px 0;
+  text-transform: uppercase;
+}
+.hero-frase {
+  font-family: 'Lora', serif;
+  font-size: 1.07em;
+  color: #ffe6b2;
+  margin-bottom: 18px;
+  margin-top: 7px;
+  font-style: italic;
+  letter-spacing: .7px;
+}
+.hero-desc {
+  color: #bfb9df;
+  font-size: 1em;
+  margin-top: 6px;
+}
+.hero-img {
+  flex: 1 1 440px;
+  min-width: 320px;
+  background: #181624;
+  display: flex;
+  align-items: stretch;
+  justify-content: stretch;
+}
+.hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero .card{padding:28px}
+.hero img{width:100%; height:auto; border-radius:14px; display:block}
+.hero-frase {
+  font-family: 'Lora', serif;
+  font-size: 1.13rem;
+  color: #ffe8ba;
+  margin-top: 18px;
+  font-style: italic;
+  letter-spacing: 1.2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  min-height: 90px;
+  position: relative;
+}
+.frase-inner {
+  z-index: 2;
+  background: rgba(40,25,71,0.10);
+  padding: 0 8px;
+  border-radius: 8px;
+}
+.estructura-cards {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding-top: 24px;
+}
+.cards-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.estructura-card {
+  background: #19162b;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(44, 33, 83, 0.19), 0 2px 6px 0 rgba(0,0,0,0.07);
+  overflow: hidden;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  transition: transform .15s cubic-bezier(.32,2,.55,.27);
+}
+.estructura-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 18px 40px 0 rgba(44,33,83,0.30), 0 2px 6px 0 rgba(0,0,0,0.10);
+}
+.card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-bottom: 1px solid #352e51;
+}
+.card-content {
+  padding: 22px 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.card-content h3 {
+  font-family: "Cinzel", serif;
+  font-size: 1.28em;
+  font-weight: 700;
+  color: #ece6ff;
+  margin: 0 0 0.4em 0;
+  letter-spacing: .04em;
+}
+.card-content p {
+  color: #dad4f0;
+  font-size: 1em;
+  margin: 0;
+  line-height: 1.48;
+}
+.logo-contacto {
+  width: 92px;
+  height: auto;
+  margin-bottom: 18px;
+  filter: drop-shadow(0 0 18px #7a6cc288);
+  animation: logo-brillo 1.1s;
+}
+.logo-contacto:hover {
+    transform: scale(1.07) rotate(-2deg); /* Sutil efecto al pasar el mouse */
+}
+
+.testimonios-row {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  margin-top: 18px;
+}
+.testimonio-card {
+  background: #1d1731ee;
+  border-radius: 18px;
+  box-shadow: 0 6px 22px 0 rgba(44, 33, 83, 0.13);
+  width: 320px;
+  padding: 28px 22px 18px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.18s, transform 0.18s;
+  min-height: 240px;
+  position: relative;
+  border: 1.5px solid #43377950;
+  animation: fadein 1.2s;
+}
+.testimonio-card:hover {
+  box-shadow: 0 16px 36px 0 #53459055;
+  transform: translateY(-4px) scale(1.025);
+}
+.pais-ico img {
+  width: 38px; height: 38px; display: block; border-radius: 50%;
+  margin-bottom: 10px; border: 1.5px solid #c9a94733;
+}
+.testimonio-card blockquote {
+  font-size: 1.08em;
+  color: #efe4ce;
+  font-family: 'Lora',serif;
+  font-style: italic;
+  margin: 0 0 14px 0;
+  padding: 0 4px;
+  line-height: 1.45;
+  text-align: center;
+}
+.testimonio-card .autor {
+  color: #bfb9df;
+  font-size: 1em;
+  margin-top: auto;
+  font-family: "Cinzel",serif;
+  font-weight: 600;
+  letter-spacing: .2px;
+}
+.contact-card {
+  background: #1b1630ee;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 #53459026, 0 2px 6px 0 #0002;
+  padding: 38px 24px 34px 24px;
+  max-width: 390px;
+  margin: 0 auto 38px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border: 1.5px solid #493d7928;
+  animation: fadein 1.1s;
+}
+.contact-card h2 {
+  font-size: 2.0rem;
+  letter-spacing: 1.5px;
+  color: #c9bbfc;
+  margin-bottom: 6px;
+  font-family: 'Cinzel', serif; 
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.datos-contacto {
+  margin-bottom: 15px;
+}
+
+.contact-link {
+  color: #e1d3fa;
+  font-size: 1.09rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: color 0.13s;
+}
+.contact-link:hover {
+  color: #bbaaff;
+  text-decoration: underline;
+}
+
+.social-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.social-ico img {
+  width: 31px;
+  height: 31px;
+  display: block;
+  filter: brightness(0) invert(1) drop-shadow(0 0 6px #ad95ef99); /* Blanco y glow violeta claro */
+  opacity: 0.85;
+  transition: opacity .15s, transform .18s cubic-bezier(.28,1.1,.52,1), filter .22s;
+}
+.social-ico:hover img {
+  opacity: 1;
+  transform: scale(1.15) rotate(-6deg);
+  filter: brightness(2.3) drop-shadow(0 0 22px #bda6fecc);
+}
+
+@media (max-width: 1060px) {
+  .cards-row { gap: 18px; }
+  .estructura-card { width: 90vw; max-width: 375px; }
+}
+@media (max-width: 880px) {
+  .cards-row { flex-direction: column; gap: 28px; align-items: center; }
+  .estructura-card { width: 96vw; max-width: 430px; }
+}
+@media (max-width:900px) {
+  .testimonios-row { flex-direction: column; gap: 24px; align-items: center;}
+  .testimonio-card { width: 98vw; max-width: 420px;}
+}
+@keyframes fadein {
+  0%{opacity:0; transform: translateY(30px) scale(0.98);}
+  100%{opacity:1; transform: translateY(0) scale(1);}
+}
+@keyframes logo-brillo {
+  0%   { filter: drop-shadow(0 0 2px #bbaaff33); opacity: 0.68; }
+  65%  { filter: drop-shadow(0 0 38px #dac7ffcc); opacity: 1; }
+  100% { filter: drop-shadow(0 0 16px #7a6cc288); opacity: 1; }
+}
+
+@media (max-width: 550px) {
+  .contact-card { padding: 18px 4vw 22px 4vw; max-width: 98vw;}
+  .logo-contacto { width: 64px; }
+  .social-row { gap: 14px;}
+}
+
+/* GRID 3 */
+.grid3{display:grid; gap:var(--gap); grid-template-columns:repeat(3,1fr)}
+.item{padding:22px}
+/* DOWNLOADS */
+.downloads{display:grid; gap:var(--gap); grid-template-columns:repeat(2,1fr)}
+.downloads a{display:block; padding:16px; border-radius:12px; border:1px solid rgba(255,255,255,.15)}
+/* FORM */
+form{display:grid; gap:14px}
+input,textarea{
+  width:100%; padding:12px 14px; border-radius:10px;
+  border:1px solid rgba(255,255,255,.15); background:rgba(0,0,0,.35); color:var(--ink)
+}
+textarea{min-height:120px; resize:vertical}
+.chk {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  grid-column: 1 / -1;
+}
+.chk input[type="checkbox"] {
+  accent-color: #534590;
+  width: 20px;
+  height: 20px;
+  margin: 0 6px 0 0;
+}
+footer{border-top:1px solid rgba(255,255,255,.1); padding:38px 0; color:#c9c9c9}
+/* RESPONSIVE */
+@media (max-width: 980px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-llave { flex-direction: column; min-height: unset; }
+  .hero-img, .hero-text { min-width: 0; padding: 32px 18px; }
+  .hero-img { height: 240px; }
+  .grid3{grid-template-columns:1fr}
+  .downloads{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container navwrap">
+    <a class="brand" href="#inicio">
+      <img src="black_seal.png" alt="CA.SM+">
+      <span>Los Círculos y la Ciencia Interior</span>
+    </a>
+   <!--   <div class="menu">
+      <a href="#sobre">Nosotros</a>
+      <a href="#estructura">Estructura</a>
+      <a href="#estudios">Estudios</a>
+      <a href="#temario">Temario</a>
+      <a href="#folletos">Folletos</a>
+      <a href="#ingreso">Ingreso</a>
+      <a href="#contacto">Contacto</a>
+    </div>-->
+  </div>
+</nav>
+
+<main id="inicio">
+
+  <!-- HERO -->
+<section class="section hero">
+  <div class="container hero-llave">
+    <div class="hero-text">
+      <h2>LOS CÍRCULOS <span style="font-size:0.7em; letter-spacing:0;">(CAºSM+)</span></h2>
+      <h3 class="hero-subtitle">Metaespacio virtual de Ciencia Interior</h3>
+      <div class="hero-frase">
+        <span class="frase-inner">El verdadero conocimiento de Sí Mismo no se enseña... se despierta</span>
+      </div>
+      <div class="hero-desc">
+        Cámaras exclusivas de Hermetismo, Alquimia Interior, Magia y la Ciencia del Espíritu.
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="llave0.png" alt="Instrumento simbólico">
+    </div>
+  </div>
+</section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
+      <div class="card item">
+        <h2>Sobre Los Círculos</h2>
+          <p><strong>Los Círculos (CAºSM+)</strong> constituyen un Magisterio Interior Vivo orientado a la transmutación íntima y privada de sus miembros.</p>
+			<p>Somos un Metaespacio Virtual moderno, dedicado al estudio sistémico del Hermetismo, la Alquimia Interior, la Magia y la Ciencia del Espíritu.</p>
+			<p>No seguimos religiones, creencias, obediencias ni hermandades; aplicamos el método hermético para una praxis alquímica que conduce a una comprensión ontológica espiritual propia y al uso conciente de la tecnología energética llamada Magia.</p>
+			<p>Nuestro propósito es formar individuos libres, responsables y conscientes, capaces de comprender y operar con los principios cósmicos y las leyes universales a partir su propia experiencia, registro y recuerdo interior.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUCTURA -->
+<section class="section estructura">
+  <div class="container estructura-cards">
+    <h2 class="section-title">Estructura de Formación</h2>
+    <div class="cards-row">
+      <div class="estructura-card">
+        <img src="atrio.jpg" alt="Atrium" class="card-img">
+        <div class="card-content">
+          <h3>ATRIUM</h3>
+          <p>Esta cámara virtual Externa es el espacio de ingreso donde el aspirante estudia, practica y consolida los Fundamentos de la Ciencia Interior, preparando su transición de buscador a Iniciado.</p>
+        </div>
+      </div>
+      <div class="estructura-card">
+        <img src="sanctum.jpg" alt="Sanctum" class="card-img">
+        <div class="card-content">
+          <h3>SANCTUM</h3>
+          <p>En esta cámara virtual Intermedia, la praxis, la observación y la ejecución ritual son los métodos mediante los cuales el Iniciado perfecciona su disciplina y avanza hacia el estado de Adepto de los Misterios.</p>
+        </div>
+      </div>
+      <div class="estructura-card">
+        <img src="naos.jpg" alt="Naos" class="card-img">
+        <div class="card-content">
+          <h3>NAOS</h3>
+          <p>Esta cámara virtual Interna es el estado más avanzado, donde el Adepto realiza el Magisterio de la Magna Obra, asume su rol cósmico de Teurgo y traza su propio sendero iniciático a partir de Ciencia Interior plenamente despertada.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- ESTUDIOS -->
+  <section id="estudios" class="section">
+    <div class="container">
+      <div class="card item">
+        <h2>Los Estudios</h2>
+        <p>Hemos desarrollado un <strong>sistema exclusivo </strong> para el estudio y la práctica de las Ciencias Arcanas Ocultas, integrando ontología, simbología, filosofía natural, ritualística, psicología profunda y los avances de la ciencia contemporánea. </p>
+		<p>La mayor parte de nuestros libros, tratados y la totalidad de las monografías entregadas a nuestros miembros son de <strong>autoría original</strong> de Los Círculos y conforman un corpus mistérico único y reservado.</p>
+        <p>Nuestra formación iniciática combina estudio teórico, trabajo energético, prácticas esotéricas arcanas profundas y el registro sistemático de los propios resultados, asegurando un camino de autotransformación entendible y realizable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEMARIO -->
+  <section id="temario" class="section">
+    <div class="container">
+      <h2>Grandes temas del Atrium</h2>
+      <div class="grid3">
+        <div class="card item"><h3>1. Fundamentos del Camino Esotérico</h3></div>
+        <div class="card item"><h3>2. Ciencia Hermética y Alquimia Interior</h3></div>
+        <div class="card item"><h3>3. Técnicas Operativas del Ocultista</h3></div>
+        <div class="card item"><h3>4. Simbología, Mitos y Textos Sagrados</h3></div>
+        <div class="card item"><h3>5. Energía, Naturaleza y Vibración</h3></div>
+        <div class="card item"><h3>6. Ciencias Arcanas y Conocimiento Primordial</h3></div>
+        <div class="card item" style="grid-column:1/-1"><h3>7. Psicología Esotérica y Praxis de la Consciencia</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+<section id="testimonios" class="section">
+  <div class="container">
+    <h2>Comentarios de Miembros</h2>
+    <div class="testimonios-row">
+      <div class="testimonio-card">
+        <div class="pais-ico"><img src="https://hatscripts.github.io/circle-flags/flags/cr.svg" alt="Costa Rica" title="Costa Rica"></div>
+        <blockquote>“Este Atrium me tiene fascinado... estaba leyendo en la página 11, muy hermoso... esa es la misión en la senda, entender y ampliar las ciencias, trabajar en ser mejor, gracias.”</blockquote>
+        <div class="autor">César Ch., Costa Rica</div>
+      </div>
+      <div class="testimonio-card">
+        <div class="pais-ico"><img src="https://hatscripts.github.io/circle-flags/flags/ec.svg" alt="Ecuador" title="Ecuador"></div>
+        <blockquote>“Me siento muy motivado por estudiar, aprender y seguir avanzando... lo que voy aprendiendo me va resonando y lo estoy aplicando en las terapias que hago.”</blockquote>
+        <div class="autor">Andrés R., Ecuador</div>
+      </div>
+      <div class="testimonio-card">
+        <div class="pais-ico"><img src="https://hatscripts.github.io/circle-flags/flags/mx.svg" alt="México" title="México"></div>
+        <blockquote>“Ese es el camino que siempre he querido llevar... sé que es mucha responsabilidad, disciplina y determinación lo que resulta de este caminar... me llena de alegría el leer, entender y descubrir todo lo que conlleva.”</blockquote>
+        <div class="autor">Agustín B., México</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- FOLLETOS -->
+  <section id="folletos" class="section">
+    <div class="container">
+      <div class="card item">
+        <h2>Folletos para el Aspirante</h2>
+        <div class="downloads">
+            <a href="CASM-Para_el_Aspirante.pdf" target="_blank">CASM Los Círculos — Para el Aspirante (PDF)</a>
+            <a href="CASM-Formalidades.pdf" target="_blank">CASM Formalidades en Los Círculos (PDF)</a>
+            <!-- Puedes añadir más imágenes o PDFs aquí -->
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INGRESO -->
+  <section id="ingreso" class="section">
+    <div class="container">
+      <div class="card item">
+        <h2>Formulario de Ingreso</h2>
+        <!-- Opción A: formulario simple (envía a tu correo con formspree/mailthis) -->
+        <!-- Opción B: enlaza a tu Google Form (rápido). Descomenta el botón: -->
+        <!-- <p><a class="btn" href="URL_DE_TU_GOOGLE_FORM" target="_blank">Abrir Formulario</a></p> -->
+
+        <!-- Opción A (simple, sin backend): usa Formspree; reemplaza action https://formspree.io/f/xvgwdgqb-->
+        <form action="https://formspree.io/f/xvgwdgqb" method="POST">
+          <input name="nombre" placeholder="Nombre completo" required>
+          <input name="pais" placeholder="País" required>
+          <input name="ciudad" placeholder="Ciudad" required>
+          <input type="email" name="correo" placeholder="Correo electrónico" required>
+          <input type="telefono" name="telefono" placeholder="Teléfono móvil" required>
+          <textarea name="motivo" placeholder="¿Por qué deseas ingresar a Los Círculos?" required></textarea>
+            <label class="chk">
+              <input type="checkbox" required> He leído los objetivos, métodos y formalidades de Los Círculos y acepto ser miembro.
+            </label>
+          <button class="btn" type="submit">Enviar y Cruzar el Umbral</button>
+        </form>
+        <p style="margin-top:10px; font-size:14px; color:#c9c9c9">Tras la revisión inicial, un tutor se pondrá en contacto contigo.</p>
+      </div>
+    </div>
+  </section>
+
+
+<!-- CONTACTO -->
+<section id="contacto" class="section">
+  <div class="container">
+    <div class="contact-card">
+      <img src="black_seal.png" alt="Logo Los Círculos" class="logo-contacto">
+      <h2>CONTACTO</h2>
+      <div class="datos-contacto">
+        <p>
+          <a href="mailto:circulos1998@gmail.com" class="contact-link" title="Enviar correo">
+            circulos1998@gmail.com
+          </a>
+        </p>
+        <p>
+          <a href="https://wa.me/593984662817" class="contact-link" target="_blank" title="Enviar WhatsApp">
+            +593 098 466 2817
+          </a>
+        </p>
+      </div>
+      <div class="social-row">
+		<a href="mailto:circulos1998@gmail.com" class="social-ico" title="Gmail">
+		<a href="mailto:circulos1998@gmail.com" class="social-ico" title="Correo electrónico">
+		  <svg width="36" height="36" viewBox="0 0 24 24" fill="none">
+			<rect width="24" height="24" rx="6" fill="#d1c6fb" opacity="0.13"/>
+			<path d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7zm2-.25a.25.25 0 0 0-.25.25v.52l7.25 4.67c.29.19.68.19.97 0L18.25 7.5V7a.25.25 0 0 0-.25-.25H6zm12 2.38-6.38 4.11c-.5.32-1.14.32-1.64 0L6 9.13V17a.25.25 0 0 0 .25.25h11.5a.25.25 0 0 0 .25-.25V9.13z" fill="#ece6ff"/>
+		  </svg>
+		</a>
+        <a href="https://wa.me/593984662817" class="social-ico" target="_blank" title="WhatsApp">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61558740403962" class="social-ico" target="_blank" title="Facebook">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook">
+        </a>
+        <a href="https://t.me/loscirculos" class="social-ico" target="_blank" title="Telegram">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/telegram.svg" alt="Telegram">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="container" style="text-align:center">
+    <p><strong>CAºSM+ — CIRCULI ARCANUM SECRETORUM MYSTAGOGICUS</strong><br>
+    Metaespacio virtual de Ciencia Interior <em>Los Círculos</em></p>
+    <p>© 2025 — Todos los derechos reservados</p>
+  </div>
+</footer>
+  <script src="main.js"></script>
+
+</body>
+</html>
